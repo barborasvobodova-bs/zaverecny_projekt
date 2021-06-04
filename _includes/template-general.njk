@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css"> 
+
+      
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="menu">
+
+		<input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+		<label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
+
+		<ul class="menu__list">
+			<li class="menu__item"><a class="menu__link" href="/">O nás</a></li>
+			<li class="menu__item"><a class="menu__link" href="/pleteni/">Pletení a háčkování</a></li>
+			<li class="menu__item"><a class="menu__link" href="/cajovna/">Čajovna</a></li>
+			<li class="menu__item"><a class="menu__link" href="/galanterie/">Galanterie</a></li>
+			<li class="menu__item"><a class="menu__link" href="/kontakt/">Kontakt</a></li>
+		</ul>
+
+	</nav>
+
+    <p class="opening">Úterý-Neděle 9.00-21.00</p>
+         
+    </header>
+    
+<div class="logo">
+    <img class="logo-image" src="/images/logo_hladce_obrace.svg" alt="logo">
+</div>
+    
+
+<section class="hero">
+    <h1 class="hero-text">Pletací a háčkovací čajovna s galanterií v centru Brna</h1> 
+</section>
+
+<main class="main">
+{{ content | safe }}
+</main>
+
+
+<section class="footer">
+    <div class="footer-wrap">
+    <div class="footer-text">
+        <h2>Kde nás najdete</h2>
+        <div class="contact">
+            <div class="contact-text">
+            <h3 class="h3-adress">Hladce obrace</h3>
+            <p class="adress">Jaselká 11, Brno 60200</p>
+            <p class="adress">+420 737 217 213</p>
+            <p class="adress">podnik@hladceobratce.cz</p>
+            <br>
+            <p class="adress"><b>Úterý-Neděle 9.00-21.00</b></p>
+            </div>
+            <br>
+        <a class="social" href="https://cs-cz.facebook.com"><img class="icon" src="/images/fb.png"></a>
+        <a class="social" href="https://instagram.com"><img class="icon" src="/images/ig.png"></a>
+        </div>
+    </div>
+        <div class="map">
+            <iframe class="map-size" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2607.100723810795!2d16.598626014843294!3d49.19864877932225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471294450a4ae49b%3A0xa6179ff9544a3a4d!2sJaselsk%C3%A1%2C%20602%2000%20Brno-st%C5%99ed!5e0!3m2!1sfr!2scz!4v1622397298068!5m2!1sfr!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+        <p class="footer-copy">©2021, Hladce obrace</p>
+    </section>
+    
+        
+</body>
+</html>

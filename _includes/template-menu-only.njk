@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{{title}}</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css"> 
+
+      
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="menu">
+
+		<input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+		<label for="menu-checkbox" class="menu__toggler">☰ Menu</label>
+
+		<ul class="menu__list">
+			<li class="menu__item"><a class="menu__link" href="/">O nás</a></li>
+			<li class="menu__item"><a class="menu__link" href="/pleteni/">Pletení a háčkování</a></li>
+			<li class="menu__item"><a class="menu__link" href="/cajovna/">Čajovna</a></li>
+			<li class="menu__item"><a class="menu__link" href="/galanterie/">Galanterie</a></li>
+			<li class="menu__item"><a class="menu__link" href="/kontakt/">Kontakt</a></li>
+		</ul>
+
+	</nav>
+
+    <p class="opening">Úterý-Neděle 9.00-21.00</p>
+         
+    </header>
+
+    
+<main class="main">
+{{ content | safe }}
+</main>
+
+    <p class="footer-copy">©2021, Hladce obrace</p>
+       
+        
+</body>
+</html>

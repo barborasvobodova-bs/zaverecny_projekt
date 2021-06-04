@@ -1,0 +1,134 @@
+@use'parametrs';
+
+$c-primary: #f7a3b1;
+$c-secondary: #53453f;
+$c-tercial: #fffced;
+
+$spacer: 30px;
+
+$mobile: 859px;
+$pc: 860px;
+
+/*hlavička*/
+.header {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;   
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: $spacer;
+}
+
+/*hlavička--menu*/
+@media (max-width: $mobile) {
+    .menu__checkbox {
+        position: absolute;
+        left: -9999px;}
+
+    .menu__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: $c-secondary;
+        display: none;
+    }
+
+    .menu__link {
+        display: block;
+        padding: $spacer / 2;
+        text-decoration: none;
+        color: $c-tercial;
+    
+        &:hover{
+            color:$c-tercial;
+            background-color: $c-primary;
+        }
+    }
+
+    .menu__checkbox:checked ~ .menu__list {
+        display: block;
+    }
+}
+@media (min-width: $pc) {
+    .menu__toggler{
+        display: none;
+        }
+    
+    .menu__list {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu__checkbox {
+        position: absolute;
+        left: -9999px;}
+    
+    .menu__link {
+            display: block;
+            padding: $spacer / 2;
+            text-decoration: none;
+            color:$c-secondary;
+                         
+
+        &:hover {
+            color:$c-tercial;
+            background-color: $c-primary;
+            }
+        
+        &:visited {
+            color:$c-secondary; 
+        }
+    }
+  
+}
+.opening {
+    margin: 0;
+    @media (min-width: $pc) {    
+        padding-top: 15px;}
+}
+/*---Logo---*/
+.logo {
+    text-align: center;
+}
+
+.logo-image{
+    max-width: 40%;
+    @media (min-width:$pc) {
+        max-width: 25%;
+    }
+}
+
+/*---Hero sekce---*/
+.hero {
+	min-height: 250px;
+    background-image: url(./../images/hero1.png);
+	background-size: cover;
+	background-position: center center;
+    display: grid;
+    grid-template-columns: repeat (3, 1fr);
+    grid-template-rows: repeat (4, 1fr);
+    gap: 0px 0px;
+
+        @media (min-width: $pc) {
+            min-height: 350px;
+        }
+}
+
+.hero-text {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: $spacer;
+    padding-left: $spacer;
+    color: $c-tercial;
+    text-shadow: 2px 2px 5px $c-secondary;
+    grid-column: 3 / 4;
+    grid-row: 4 / 5; 
+    justify-items: end;
+    align-items: end;
+}

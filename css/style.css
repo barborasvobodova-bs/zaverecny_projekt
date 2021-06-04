@@ -1,0 +1,809 @@
+@charset "UTF-8";
+/*hlavička*/
+.header {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 30px;
+}
+
+/*hlavička--menu*/
+@media (max-width: 859px) {
+  .menu__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #53453f;
+    display: none;
+  }
+
+  .menu__link {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fffced;
+  }
+  .menu__link:hover {
+    color: #fffced;
+    background-color: #f7a3b1;
+  }
+
+  .menu__checkbox:checked ~ .menu__list {
+    display: block;
+  }
+}
+@media (min-width: 860px) {
+  .menu__toggler {
+    display: none;
+  }
+
+  .menu__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .menu__checkbox {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .menu__link {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #53453f;
+  }
+  .menu__link:hover {
+    color: #fffced;
+    background-color: #f7a3b1;
+  }
+  .menu__link:visited {
+    color: #53453f;
+  }
+}
+.opening {
+  margin: 0;
+}
+@media (min-width: 860px) {
+  .opening {
+    padding-top: 15px;
+  }
+}
+
+/*---Logo---*/
+.logo {
+  text-align: center;
+}
+
+.logo-image {
+  max-width: 40%;
+}
+@media (min-width: 860px) {
+  .logo-image {
+    max-width: 25%;
+  }
+}
+
+/*---Hero sekce---*/
+.hero {
+  min-height: 250px;
+  background-image: url(./../images/hero1.png);
+  background-size: cover;
+  background-position: center center;
+  display: grid;
+  grid-template-columns: repeat 3, 1fr;
+  grid-template-rows: repeat 4, 1fr;
+  gap: 0px 0px;
+}
+@media (min-width: 860px) {
+  .hero {
+    min-height: 350px;
+  }
+}
+
+.hero-text {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 30px;
+  padding-left: 30px;
+  color: #fffced;
+  text-shadow: 2px 2px 5px #53453f;
+  grid-column: 3/4;
+  grid-row: 4/5;
+  justify-items: end;
+  align-items: end;
+}
+
+/*---Patička---*/
+.footer {
+  background-color: #53453f;
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+@media (min-width: 860px) {
+  .footer {
+    margin-top: 90px;
+    margin-bottom: 15px;
+  }
+}
+
+.footer-wrap {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: $c-secondary;*/
+  color: #fffced;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 860px) {
+  .footer-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+
+.h3-adress, .adress, .social {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.footer-text {
+  /*padding-left: $spacer;*/
+}
+@media (min-width: 860px) {
+  .footer-text {
+    grid-column: 1/2;
+  }
+}
+
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+}
+
+.map {
+  text-align: center;
+  flex-basis: 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media (min-width: 860px) {
+  .map {
+    grid-column: 2/4;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.map-size {
+  max-width: 100%;
+  height: 300px;
+  margin-bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footer-copy {
+  background-color: white;
+  text-align: center;
+  margin: 0;
+  padding-top: 15px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Roboto Slab", serif;
+  color: #53453f;
+  margin: 0;
+}
+
+.cursive {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  color: #f7a3b1;
+  text-align: center;
+  font-size: 42px;
+}
+
+.citation::before, .citation::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: #f7a3b1;
+  margin: 20px auto;
+}
+
+h2, h3 {
+  margin: 0;
+  padding-top: 30px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+.h2-color {
+  color: #f7a3b1;
+}
+
+/*---Stránka O nás---*/
+.introduction, .citation, .offer {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+@media (min-width: 860px) {
+  .introduction, .citation, .offer {
+    margin-top: 90px;
+  }
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+}
+
+.intro-text {
+  padding-bottom: 30px;
+}
+
+@media (min-width: 860px) {
+  .introduction {
+    display: grid;
+    grid-template-columns: repeat 3, 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+
+  .intro-text {
+    grid-column: 1/3;
+    align-self: start;
+  }
+
+  .intro-image {
+    grid-column: 3/4;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+    padding-top: 30px;
+    justify-self: end;
+  }
+}
+.card {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+}
+
+.description {
+  background-color: #fffced;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+
+.h3-color {
+  color: #f7a3b1;
+}
+
+.card-link {
+  color: #f7a3b1;
+  text-decoration: none;
+}
+.card-link:hover, .card-link:visited {
+  color: #f7a3b1;
+}
+
+@media (min-width: 860px) {
+  .offer-structure {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+
+  .card-1 {
+    grid-column: 1/2;
+  }
+
+  .card-2 {
+    grid-column: 2/3;
+  }
+
+  .card-3 {
+    grid-column: 3/4;
+  }
+
+  .img-card {
+    height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+/*---Stránka kontakt---*/
+.location {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+@media (min-width: 860px) {
+  .location {
+    margin-top: 90px;
+  }
+}
+
+.transport {
+  background-color: #fffced;
+  margin-top: 60px;
+}
+@media (min-width: 860px) {
+  .transport {
+    margin-top: 90px;
+  }
+}
+
+.transport-wrapper {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.h3-transport, .transport-par, .personals-par, .payment-par {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.personals {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+@media (min-width: 860px) {
+  .personals {
+    margin-top: 90px;
+  }
+}
+
+.personals-text {
+  padding-bottom: 60px;
+}
+
+.personals-image-wrapper {
+  text-align: center;
+}
+
+.personals-image {
+  width: 30%;
+}
+@media (min-width: 860px) {
+  .personals-image {
+    width: 60%;
+  }
+}
+
+.h3-payment {
+  padding-bottom: 30px;
+  padding-top: 60px;
+}
+
+@media (min-width: 860px) {
+  .transport-wrapper {
+    display: grid;
+    grid-template-columns: repeat 3, 1fr;
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+  }
+
+  .transport-text {
+    grid-column: 3/4;
+    grid-row: 1/1;
+    /*align-self: start;*/
+  }
+
+  .transport-image {
+    grid-column: 1/3;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    padding-top: 30px;
+  }
+
+  .personals-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat 2, 1fr;
+    max-height: 500px;
+  }
+
+  .personals-text {
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .payment-text {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+
+  .personals-image-wrapper {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: right;
+  }
+
+  .h3-payment {
+    padding-top: 30px;
+  }
+}
+/*---Čajovna---*/
+.teahouse-menu, .teahouse-interier {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+@media (min-width: 860px) {
+  .teahouse-menu, .teahouse-interier {
+    margin-top: 90px;
+  }
+}
+
+.teahouse-menu-wrapper {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 860px) {
+  .teahouse-menu-wrapper {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    align-items: center;
+  }
+}
+
+.tehouse-menu-link1, .teahouse-menu-link2 {
+  display: inline-block;
+}
+
+.teahouse-menu-link2 {
+  grid-column: 2/4;
+}
+
+.teahouse-menu-image {
+  max-width: 100%;
+}
+
+.menu-text-link {
+  color: #f7a3b1;
+  text-decoration: none;
+}
+.menu-text-link:visited {
+  color: #f7a3b1;
+}
+
+.teahouse-photos {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 860px) {
+  .teahouse-photos {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+  }
+}
+
+.teahouse-image {
+  max-width: 100%;
+  padding-top: 30px;
+}
+@media (min-width: 860px) {
+  .teahouse-image {
+    height: 200px;
+    padding-top: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+/*---Galanterie---*/
+.store-sortiment {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+@media (min-width: 860px) {
+  .store-sortiment {
+    margin-top: 90px;
+  }
+}
+
+.product-gallery {
+  background-color: #fffced;
+  margin-top: 60px;
+}
+@media (min-width: 860px) {
+  .product-gallery {
+    margin-top: 90px;
+  }
+}
+
+.product-icon {
+  height: 60px;
+  padding-right: 30px;
+}
+
+.product-gallery-wrapper {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media (min-width: 860px) {
+  .product-gallery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.product-gallery-tab {
+  display: flex;
+  flex-basis: 100%;
+  flex-shrink: 1;
+  flex-grow: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: center;
+}
+
+.store-fotos {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 860px) {
+  .store-fotos {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    /*grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));*/
+  }
+}
+
+.store-image {
+  max-width: 100%;
+  padding-top: 30px;
+}
+@media (min-width: 860px) {
+  .store-image {
+    height: 200px;
+    padding-top: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+/*---Pletení---*/
+.workshops-intro, .workshops-calendar {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  /*@media (min-width: $pc) {
+      margin-top: $spacer * 3;
+  }*/
+}
+
+.workshops-intro {
+  display: flex;
+  flex-direction: column;
+}
+
+.workshop-intro-par {
+  padding-bottom: 30px;
+}
+
+@media (min-width: 860px) {
+  .workshops-intro {
+    display: grid;
+    grid-template-columns: repeat 3, 1fr;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
+    margin-top: 90px;
+  }
+
+  .workshop-intro-text {
+    grid-column: 1/3;
+    align-self: start;
+  }
+
+  .workshop-image {
+    grid-column: 3/4;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 300px;
+    padding-top: 30px;
+    justify-self: end;
+  }
+}
+.h3-workshop, .par-workshop, .par-day, .par-price {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.crochet-workshops, .knitting-workshops {
+  background-color: #fffced;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  margin-top: 60px;
+}
+
+.workshop-days {
+  border-top-style: solid;
+  border-width: 2px;
+  border-color: #f7a3b1;
+}
+
+.par-price {
+  padding-bottom: 15px;
+}
+
+.h3-workshop {
+  padding-top: 15px;
+}
+
+.h3-crochet, .h3-knitting {
+  padding-bottom: 15px;
+}
+
+.inscription {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.inscription-par1, .form-wrapper, .form-par1 {
+  margin-top: 60px;
+}
+
+.form-horizontal {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-horizontal label {
+  flex: 0 0 100px;
+}
+
+.form-horizontal input, .form-horizontal textarea, .form-horizontal select {
+  flex: 1 1 100%;
+  width: 400px;
+}
+@media (min-width: 860px) {
+  .form-horizontal input, .form-horizontal textarea, .form-horizontal select {
+    width: 600px;
+  }
+}
+
+.button {
+  margin-top: 30px;
+  border: 0;
+  padding: 15px;
+  font-size: 16px;
+  font-family: "Roboto Slab", serif;
+  background-color: #f7a3b1;
+}
+.button:hover {
+  color: #fffced;
+  background-color: #53453f;
+}
+
+.form-image {
+  width: 45%;
+}
+
+.form-image-wrapper {
+  text-align: right;
+  margin-top: 30px;
+}
+
+@media (min-width: 860px) {
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form {
+    grid-column: 1/2;
+  }
+
+  .form-image {
+    grid-column: 2/3;
+    width: 60%;
+    align-self: end;
+    justify-self: end;
+  }
+}
+/*---Podstránka s nabídkou čajovny---*/
+.menu-card-teahouse {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-card-teahouse-image {
+  max-width: 100%;
+}
+@media (min-width: 860px) {
+  .menu-card-teahouse-image {
+    max-width: 85%;
+  }
+}/*# sourceMappingURL=style.css.map */
